@@ -1,0 +1,10 @@
+/**mustache project css file**/
+
+.user_thumbnails {
+  width: 100px;
+  height: 100px;
+}
+
+tr {
+  border: 2px solid gray;
+}
