@@ -6,7 +6,7 @@ const path = require("path");
 const mustacheExpress = require("mustache-express");
 
 app.engine("mustache", mustacheExpress());
-app.set("views", ".");
+app.set("views", "./views");
 app.set("view engine", "mustache");
 
 app.use("/css", express.static("public"));
@@ -18,8 +18,8 @@ app.get("/", function(req, res){
   res.render("index", data);
 });
 
-app.get("/users/:id", function(req, res){
+app.get("/user/:id", function(req, res){
   let id = req.params.id;
-  let user = data.users[id];
-  res.render("user", user)
+  let user = data.user[id];
+  res.render("user", id)
 });
